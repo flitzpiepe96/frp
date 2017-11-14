@@ -30,7 +30,7 @@ public class Main {
         SLabel speed = new SLabel(time.map(d -> 9.81*d).map(d -> "Speed: " + d + "m/s"));
         frame.add(speed);
         
-        SLabel distance = new SLabel(time.map(d -> 9.81 * Math.pow(d, 2)).map(d -> "Distance: " + d + "m"));
+        SLabel distance = new SLabel(time.map(d -> (1d/2d) * 9.81 * Math.pow(d, 2)).map(d -> "Distance: " + d + "m"));
         frame.add(distance);
         
         frame.setSize(400, 160);
